@@ -19,7 +19,7 @@ func calculateAverageV2(values: [Int]) -> Double? {
     return Double(sum) / Double(values.count)
 }
 
-let v2_average = calculateAverageV2(values: [1, 2, 3])
+let v2_average = calculateAverageV2(values: [1, 2, 3]) // returns 2
 let v2_averageNan = calculateAverageV2(values: []) // not good! returns NaN
 
 
@@ -35,7 +35,7 @@ func calculateAverageV3(values: [Int]) -> Double? {
     return Double(sum) / Double(values.count)
 }
 
-let v3_average = calculateAverageV3(values: [1, 2, 3])
+let v3_average = calculateAverageV3(values: [1, 2, 3]) // returns 2
 let v3_averageNan = calculateAverageV3(values: []) // nil
 
 /// v4: using reduce
@@ -49,7 +49,7 @@ func calculateAverageV4(values: [Int]) -> Double? {
     return Double(sum) / Double(values.count)
 }
 
-let v4_average = calculateAverageV4(values: [1, 2, 3])
+let v4_average = calculateAverageV4(values: [1, 2, 3]) // returns 2
 let v4_averageNan = calculateAverageV4(values: []) // nil
 
 ///v5: improvements on the API: _values_ is redundant
@@ -57,5 +57,5 @@ func calculateAverageV5(_ values: [Int]) -> Double? {
     return calculateAverageV4(values: values) // saving the copy-paste :)
 }
 
-let v5_average = calculateAverageV5([1, 2, 3])
+let v5_average = calculateAverageV5([1, 2, 3]) // returns 2
 
